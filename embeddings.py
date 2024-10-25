@@ -49,7 +49,7 @@ for item in tqdm(pages_and_texts):
     item["page_sentence_count_spacy"] = len(item["sentences"])
 
     # chunking sentences
-num_sentence_chunks = 8
+num_sentence_chunks = 10
 def split_list(input_list: list[str], slice_size: int = num_sentence_chunks) -> list[list[str]]:
   return [input_list[i:i+slice_size] for i in range(0, len(input_list), slice_size)]
 for item in tqdm(pages_and_texts):
